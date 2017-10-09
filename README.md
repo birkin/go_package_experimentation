@@ -20,12 +20,19 @@ experimenting with packages
     - the filename is irrelevant
     - as long as the file's package import statement is the same, and `main.go` imports that package, `main.go` has access to all of the functions in any of the files in the package.
 
-- `Some_func_ac()`, called by `main.go`, shows how a function can be called from an external file.
-    - `main.go` does not import anything extra.
-    - a run or build require `go run ./*.go` and `go build ./*.go` instead of the 'normal' ways of calling the functions, or the following error will appear:
+- `Some_func_c()`, called by `main.go`, shows how a function can be called from an external file:
 
-            # command-line-arguments
-            ./main.go:19:17: undefined: Some_func_c
+    - in the _same_ root directory (a sibling of `main.go`).
+    - which starts with the same `package main` statement.
+    - notes:
+
+        - `main.go` does not import anything extra.
+        - a run or build require `go run ./*.go` and `go build ./*.go` instead of the 'normal' ways of calling the functions, or the following error will appear:
+
+                # command-line-arguments
+                ./main.go:19:17: undefined: Some_func_c
+
+        - i did try adding an import to the root directory, but that triggers an error something like 'cannot cycle'.
 
 
 ---
