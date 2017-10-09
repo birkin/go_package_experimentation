@@ -34,5 +34,8 @@ experimenting with packages
 
         - i did try adding an import to the root directory, but that triggers an error something like 'cannot cycle'.
 
+- `Some_func_d()`, called by `main.go`, is the same as `Some_func_c()` but shows how a function can be sent an argument.
+
+    - i expected this to work as it does, but have it here as a sanity-check because what I _haven't_ gotten working yet is passing a struct or an instance-variable of a struct to an external function.
 
 ---
