@@ -24,6 +24,17 @@ func main() {
 	somestring_d = Some_func_d(someint_d)
 	fmt.Println(fmt.Sprintf("somestring_d, ```%v```", somestring_d))
 
+	var somestring_e1 string
+	// var somestring_e2 string
+	type SomeObject struct {
+		foo_a string
+	}
+	some_object := SomeObject{"string-42"}
+	somestring_e1 = some_object.foo_a
+	fmt.Println(fmt.Sprintf("somestring_e1, ```%v```", somestring_e1))
+	// somestring_e2 = Some_func_e(some_object)
+	// fmt.Println(fmt.Sprintf("somestring_e2, ```%v```", somestring_e2))
+
 }
 
 /*
@@ -34,4 +45,5 @@ somestring_a, ```hello there project-b from file_a.go```
 somestring_b, ```hello there project-b from file_b.go```
 somestring_c, ```hello there project-b from Utils.go```
 somestring_d, ```value from Utils.go, `42````
+somestring_e1, ```string-42```
 */

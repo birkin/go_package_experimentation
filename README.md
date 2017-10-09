@@ -38,4 +38,6 @@ experimenting with packages
 
     - i expected this to work as it does, but have it here as a sanity-check because what I _haven't_ gotten working yet is passing a struct or an instance-variable of a struct to an external function.
 
+- `Some_func_e()`, called by `main.go`, is what I'm working on now -- figuring out how to pass a more complex argument to an _external_ function.
+
 ---
